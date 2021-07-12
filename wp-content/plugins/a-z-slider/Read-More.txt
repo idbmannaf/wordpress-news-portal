@@ -1,0 +1,8 @@
+[slider item="2"][slide caption="Slide 1 url="#" id=351][slide caption="Slide 2" id=352][slide caption="Slide 2" id=355][slide caption="Slide 3" id=353][slide caption="Slide 3" id=353][/slider]
+
+in slider:
+	item==> how many item you want to show in page or post
+
+inslide:
+	url		=>> image/Product Link
+	caption		=>> Caption of this image

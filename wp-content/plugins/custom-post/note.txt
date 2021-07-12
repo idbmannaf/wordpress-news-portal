@@ -1,0 +1,27 @@
+<?php
+/**
+ * Template Name: Taxonomy
+ */
+echo 'Hello';
+$args = array(
+	'post_type' => 'movie',
+	'post_status' => 'publish',
+	'posts_per_page' => 8,
+
+    );
+
+    $loop = new WP_Query( $args );
+
+    while ( $loop->have_posts() ) : $loop->the_post();
+	    print the_title();
+	    the_excerpt();
+	    the_taxonomies( array(
+		    'before' => '<div class="tax-link-wrap">',
+		    'template' => '<span class="taxonomy-label">%s:</span> <span class="taxonomy-term-list">%l.</span>',
+		    'term_template' => '<a href="%1$s" rel="tag">%2$s</a>',
+		    'sep' => '<br />',
+		    'after' => '</div>',
+	    ) );
+    endwhile;
+
+    wp_reset_postdata();
